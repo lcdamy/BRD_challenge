@@ -2,6 +2,11 @@
 
 import pandas as pd
 from datetime import datetime
+import os
+
+# CONFIGURATION
+OUTPUT_DIR = "../output"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def standardize_date(date_str):
     try:
@@ -40,5 +45,5 @@ def clean_customer_info(input_path, output_path):
 # Entry point
 if __name__ == "__main__":
     input_csv = "../data/Dummy Data cust Info.csv"
-    output_csv = "../data/Cleaned_Customer_Info.csv"
+    output_csv = "../output/Cleaned_Customer_Info.csv"
     clean_customer_info(input_csv, output_csv)

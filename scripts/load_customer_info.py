@@ -3,7 +3,7 @@ import psycopg2
 from datetime import datetime
 
 # Configuration
-CSV_FILE = "../data/Cleaned_Customer_Info.csv"
+CSV_FILE = "../output/Cleaned_Customer_Info.csv"
 DB_PARAMS = {
     "dbname": "brd_challenge",
     "user": "postgres",

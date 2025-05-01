@@ -2,7 +2,7 @@ import psycopg2
 import pandas as pd
 
 # CONFIGURATION
-CSV_FILE = "../data/Cleaned_Transactions_data.csv"
+CSV_FILE = "../output/Cleaned_Transactions_data.csv"
 DB_PARAMS = {
     "dbname": "brd_challenge",
     "user": "postgres",

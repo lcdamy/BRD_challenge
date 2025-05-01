@@ -17,6 +17,7 @@ Senior_Data_Analyst_ETL_Case_Submission/
 ├── README.md
 ├── ETL_Process_Design.pdf
 ├── data/
+├── images/
 ├── scripts/
 ├── sql/
 ├── output/
@@ -70,11 +71,11 @@ pip install pandas matplotlib seaborn psycopg2
 2. Run data scripts in order:
 
 ```bash
-python scripts/clean_transactions.py
-python scripts/clean_customers.py
-python scripts/load_to_postgres.py
-python scripts/infer_transaction_type.py
-python scripts/analyze_disbursements.py
+python scripts/clean_transaction_data.py
+python scripts/clean_customer_info.py
+python scripts/load_customer_info.py
+python scripts/load_transaction_data.py
+python scripts/analyze_transactions.py
 ```
 
 👤 Author

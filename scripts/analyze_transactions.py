@@ -4,8 +4,8 @@ import seaborn as sns
 import os
 
 # === CONFIGURATION ===
-TRANSACTION_FILE = "../data/Cleaned_Transactions_data.csv"
-CUSTOMER_FILE = "../data/Cleaned_Customer_Info.csv"
+TRANSACTION_FILE = "../output/Cleaned_Transactions_data.csv"
+CUSTOMER_FILE = "../output/Cleaned_Customer_Info.csv"
 OUTPUT_DIR = "../output"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

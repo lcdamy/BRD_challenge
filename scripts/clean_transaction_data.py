@@ -1,5 +1,10 @@
 import pandas as pd
 import re
+import os
+
+# CONFIGURATION
+OUTPUT_DIR = "../output"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def extract_identifier(comment):
     if pd.isna(comment):
@@ -82,6 +87,6 @@ if __name__ == "__main__":
     output_file = "Cleaned_Transactions_data.csv"
 
     combined_df = clean_and_combine(file1, file2)
-    output_path = "../data/" + output_file
+    output_path = "../output/" + output_file
     combined_df.to_csv(output_path, index=False)
     print(f"✅ Cleaned data saved to: {output_file}")
