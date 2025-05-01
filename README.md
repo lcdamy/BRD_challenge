@@ -79,6 +79,5 @@ python scripts/analyze_disbursements.py
 
 👤 Author
 
-[Pierre Damien Murindangabo Cyuzuzo]Senior Data Analyst Candidate
+[Pierre Damien Murindangabo Cyuzuzo - Senior Data Analyst Candidate](https://www.linkedin.com/in/pierre-damien-murindangabo-cyuzuzo-709b53151/)
 
-# BRD_challenge
