@@ -3,7 +3,8 @@ import re
 import os
 
 # CONFIGURATION
-OUTPUT_DIR = "../output"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def extract_identifier(comment):
@@ -82,11 +83,11 @@ def clean_and_combine(file1, file2):
     return combined
 
 if __name__ == "__main__":
-    file1 = "../data/Dummy Data I TXN part 1.csv"
-    file2 = "../data/Dummy Data I TXN part 2.csv"
+    file1 = os.path.join(SCRIPT_DIR, "../data/Dummy Data I TXN part 1.csv")
+    file2 = os.path.join(SCRIPT_DIR, "../data/Dummy Data I TXN part 2.csv")
     output_file = "Cleaned_Transactions_data.csv"
 
     combined_df = clean_and_combine(file1, file2)
-    output_path = "../output/" + output_file
+    output_path = os.path.join(OUTPUT_DIR, output_file)
     combined_df.to_csv(output_path, index=False)
-    print(f"✅ Cleaned data saved to: {output_file}")
+    print(f"✅ Cleaned data saved to: {output_path}")

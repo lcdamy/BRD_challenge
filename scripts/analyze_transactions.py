@@ -4,9 +4,10 @@ import seaborn as sns
 import os
 
 # === CONFIGURATION ===
-TRANSACTION_FILE = "../output/Cleaned_Transactions_data.csv"
-CUSTOMER_FILE = "../output/Cleaned_Customer_Info.csv"
-OUTPUT_DIR = "../output"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+TRANSACTION_FILE = os.path.join(SCRIPT_DIR, "../output/Cleaned_Transactions_data.csv")
+CUSTOMER_FILE = os.path.join(SCRIPT_DIR, "../output/Cleaned_Customer_Info.csv")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # === STEP 1: Load and Prepare Data ===
@@ -30,7 +31,7 @@ disbursement_summary = (
     .agg(total_disbursement=('amount', 'sum'))
     .reset_index()
 )
-disbursement_summary.to_csv(f"{OUTPUT_DIR}/disbursement_summary.csv", index=False)
+disbursement_summary.to_csv(os.path.join(OUTPUT_DIR, "disbursement_summary.csv"), index=False)
 
 # === STEP 4: Average Transaction by Period ===
 avg_txn_by_period = (
@@ -39,7 +40,7 @@ avg_txn_by_period = (
     .reset_index()
     .sort_values('period')
 )
-avg_txn_by_period.to_csv(f"{OUTPUT_DIR}/average_transaction_by_period.csv", index=False)
+avg_txn_by_period.to_csv(os.path.join(OUTPUT_DIR, "average_transaction_by_period.csv"), index=False)
 
 # === STEP 5: Visualization: Regional Disbursement ===
 region_summary = (
@@ -56,5 +57,5 @@ plt.xlabel("Region")
 plt.ylabel("Disbursement Amount")
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig(f"{OUTPUT_DIR}/disbursement_by_region.png")
+plt.savefig(os.path.join(OUTPUT_DIR, "disbursement_by_region.png"))
 print("✅ All outputs saved to 'output/' folder")

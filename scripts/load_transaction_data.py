@@ -1,8 +1,13 @@
+import os
 import psycopg2
 import pandas as pd
 
 # CONFIGURATION
-CSV_FILE = "../output/Cleaned_Transactions_data.csv"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+CSV_FILE = os.path.join(OUTPUT_DIR, "Cleaned_Transactions_data.csv")
+
 DB_PARAMS = {
     "dbname": "brd_challenge",
     "user": "postgres",
@@ -24,7 +29,7 @@ for _, row in df.iterrows():
     # Remove "ID:" before the identifier if the identifier is not null or empty
     if row['IDENTIFIER'] and isinstance(row['IDENTIFIER'], str):
         row['IDENTIFIER'] = row['IDENTIFIER'].replace("ID:", "").strip()
-    #  Insert the row into the database
+    # Insert the row into the database
     cur.execute(f"""
         INSERT INTO {TABLE_NAME} 
         (id, account_number, name, lastname, transaction_comments, period, identifier, amount, currency, transaction_type)

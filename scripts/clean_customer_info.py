@@ -5,7 +5,8 @@ from datetime import datetime
 import os
 
 # CONFIGURATION
-OUTPUT_DIR = "../output"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def standardize_date(date_str):
@@ -44,6 +45,6 @@ def clean_customer_info(input_path, output_path):
 
 # Entry point
 if __name__ == "__main__":
-    input_csv = "../data/Dummy Data cust Info.csv"
-    output_csv = "../output/Cleaned_Customer_Info.csv"
+    input_csv = os.path.join(SCRIPT_DIR, "../data/Dummy Data cust Info.csv")
+    output_csv = os.path.join(SCRIPT_DIR, "../output/Cleaned_Customer_Info.csv")
     clean_customer_info(input_csv, output_csv)

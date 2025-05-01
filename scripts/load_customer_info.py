@@ -1,9 +1,14 @@
+import os
 import pandas as pd
 import psycopg2
 from datetime import datetime
 
 # Configuration
-CSV_FILE = "../output/Cleaned_Customer_Info.csv"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+CSV_FILE = os.path.join(OUTPUT_DIR, "Cleaned_Customer_Info.csv")
+
 DB_PARAMS = {
     "dbname": "brd_challenge",
     "user": "postgres",
