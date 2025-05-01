@@ -12,6 +12,7 @@ This project demonstrates an end-to-end ETL pipeline, analytical reporting, and 
 
 📁 Folder Structure
 
+```
 Senior_Data_Analyst_ETL_Case_Submission/
 ├── README.md
 ├── ETL_Process_Design.pdf
@@ -20,6 +21,7 @@ Senior_Data_Analyst_ETL_Case_Submission/
 ├── sql/
 ├── output/
 └── report.pdf
+```
 
 🔄 ETL Workflow Summary
 
