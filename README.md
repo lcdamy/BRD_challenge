@@ -21,7 +21,7 @@ Senior_Data_Analyst_ETL_Case_Submission/
 ├── scripts/
 ├── sql/
 ├── output/
-└── report.pdf
+└── raport_summary.pdf
 ```
 
 🔄 ETL Workflow Summary
