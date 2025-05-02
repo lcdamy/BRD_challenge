@@ -46,5 +46,5 @@ def clean_customer_info(input_path, output_path):
 # Entry point
 if __name__ == "__main__":
     input_csv = os.path.join(SCRIPT_DIR, "../data/Dummy Data cust Info.csv")
-    output_csv = os.path.join(SCRIPT_DIR, "../output/Cleaned_Customer_Info.csv")
+    output_csv = os.path.join(SCRIPT_DIR, "../output/cleaned_Customer_Info.csv")
     clean_customer_info(input_csv, output_csv)

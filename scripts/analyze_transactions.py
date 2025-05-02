@@ -5,8 +5,8 @@ import os
 
 # === CONFIGURATION ===
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
-TRANSACTION_FILE = os.path.join(SCRIPT_DIR, "../output/Cleaned_Transactions_data.csv")
-CUSTOMER_FILE = os.path.join(SCRIPT_DIR, "../output/Cleaned_Customer_Info.csv")
+TRANSACTION_FILE = os.path.join(SCRIPT_DIR, "../output/cleaned_Transactions_data.csv")
+CUSTOMER_FILE = os.path.join(SCRIPT_DIR, "../output/cleaned_Customer_Info.csv")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
 OUTPUT_DIR_IMAGES = os.path.join(OUTPUT_DIR, "../images")
 os.makedirs(OUTPUT_DIR, exist_ok=True)

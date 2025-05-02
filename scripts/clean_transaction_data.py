@@ -85,7 +85,7 @@ def clean_and_combine(file1, file2):
 if __name__ == "__main__":
     file1 = os.path.join(SCRIPT_DIR, "../data/Dummy Data I TXN part 1.csv")
     file2 = os.path.join(SCRIPT_DIR, "../data/Dummy Data I TXN part 2.csv")
-    output_file = "Cleaned_Transactions_data.csv"
+    output_file = "cleaned_Transactions_data.csv"
 
     combined_df = clean_and_combine(file1, file2)
     output_path = os.path.join(OUTPUT_DIR, output_file)
