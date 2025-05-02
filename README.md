@@ -2,66 +2,20 @@
 
 This project demonstrates an end-to-end ETL pipeline, analytical reporting, and visualization based on offline banking transaction data. The aim is to improve customer insights, data quality, and support strategic decision-making in line with banking compliance and operational efficiency.
 
-🧰 Tools & Technologies
 
-- Python 3.9+ for ETL scripting and analysis
-- pandas for data cleaning and transformation
-- Microsoft Excel for manual and easy cleanup
-- PostgreSQL as the target data warehouse
-- psycopg2 for PostgreSQL integration
-- matplotlib & seaborn for visualizations
-
-📁 Folder Structure
+📁 Folder Structure Explained
 
 ```
 Senior_Data_Analyst_ETL_Case_Submission/
-├── README.md
-├── ETL_Process_Design.pdf
-├── data/
-├── images/
-├── scripts/
-├── sql/
-├── output/
-└── raport_summary.pdf
+├── README.md                # Project overview and instructions.
+├── ETL_Process_Design.pdf   # Detailed ETL process design documentation.
+├── data/                    # Raw and processed data files.
+├── images/                  # Visual assets for reports and documentation.
+├── scripts/                 # Python scripts for data cleaning, loading, and analysis.
+├── sql/                     # SQL scripts for data summarization and transformation.
+├── output/                  # Generated outputs such as reports or processed data.
+└── raport_summary.pdf       # Summary report of the analysis and findings.
 ```
-
-🔄 ETL Workflow Summary
-
-**Extract:**
-
-- Load raw offline data from CSV files (transactions and customer info)
-
-**Transform:**
-
-- Clean column names and formats
-- Convert amounts to float and standardize dates
-- Extract identifiers and periods from comment fields
-- Infer transaction types (credit/debit) where missing
-- etc.
-
-**Load:**
-
-- Load cleaned data into a PostgreSQL data warehouse using psycopg2
-
-📊 Analytical Tasks Performed
-
-- Disbursement per customer, period, transaction type, and currency
-- Average transaction amount by period
-- Regional disbursement summary with visual insights
-
-📈 Visuals Generated:
-
-- Bar chart of disbursement by region
-
-📝 SQL Query Highlights
-
-Located in the sql/ folder:
-
-- Total transactions & amounts per customer
-- Average credit transaction amount per region
-- Allocation summary per customer, period, region, and currency
-- sql query to create customers and transactions tables
-
 
 🚀 How to Run
 
