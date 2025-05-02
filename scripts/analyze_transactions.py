@@ -8,6 +8,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of 
 TRANSACTION_FILE = os.path.join(SCRIPT_DIR, "../output/Cleaned_Transactions_data.csv")
 CUSTOMER_FILE = os.path.join(SCRIPT_DIR, "../output/Cleaned_Customer_Info.csv")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "../output")
+OUTPUT_DIR_IMAGES = os.path.join(OUTPUT_DIR, "../images")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # === STEP 1: Load and Prepare Data ===
@@ -58,4 +59,5 @@ plt.ylabel("Disbursement Amount")
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.savefig(os.path.join(OUTPUT_DIR, "disbursement_by_region.png"))
+plt.savefig(os.path.join(OUTPUT_DIR_IMAGES, "disbursement_by_region.png"))
 print("✅ All outputs saved to 'output/' folder")
