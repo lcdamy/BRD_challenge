@@ -6,9 +6,10 @@ This project demonstrates an end-to-end ETL pipeline, analytical reporting, and 
 
 - Python 3.9+ for ETL scripting and analysis
 - pandas for data cleaning and transformation
+- Microsoft Excel for manual and easy cleanup
+- PostgreSQL as the target data warehouse
 - psycopg2 for PostgreSQL integration
 - matplotlib & seaborn for visualizations
-- PostgreSQL as the target data warehouse
 
 📁 Folder Structure
 
@@ -36,6 +37,7 @@ Senior_Data_Analyst_ETL_Case_Submission/
 - Convert amounts to float and standardize dates
 - Extract identifiers and periods from comment fields
 - Infer transaction types (credit/debit) where missing
+- etc.
 
 **Load:**
 
@@ -59,6 +61,7 @@ Located in the sql/ folder:
 - Average credit transaction amount per region
 - Allocation summary per customer, period, region, and currency
 - sql query to create customers and transactions tables
+
 
 🚀 How to Run
 
